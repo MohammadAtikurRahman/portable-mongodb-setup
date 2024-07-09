@@ -20,18 +20,20 @@ Before running this project, ensure you have the following installed:
 
 1. Clone the repository
 
- ```sh
-   git clone git@github.com:MohammadAtikurRahman/Embedding-MongoDB.git
-   ```
-cd EmbeddedDB
+```sh
+  git clone git@github.com:MohammadAtikurRahman/Embedding-MongoDB.git
+```
 
 2. Install dependencies
 
+```sh
 npm install
+```
 
 3. Start the server
-
+```sh
 npm start
+```
 
 The server will start on port 2000 by default.
 
@@ -49,7 +51,7 @@ The server will start on port 2000 by default.
 
 EmbeddedDB/
 ├── model/
-│   └── user.js
+│ └── user.js
 ├── mongodb-binaries/
 ├── mongodb-data/
 ├── node_binaries/
