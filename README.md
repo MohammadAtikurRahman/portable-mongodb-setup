@@ -20,7 +20,7 @@ Before running this project, ensure you have the following installed:
 
 1. Clone the repository
 
-git clone <repository_url>
+git clone <git@github.com:MohammadAtikurRahman/Embedding-MongoDB.git>
 cd EmbeddedDB
 
 2. Install dependencies
