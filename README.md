@@ -59,14 +59,11 @@ Embedding-MongoDB/
 └── README.md
 ```
 ## Configuration
+  [![Download MongoDB Setup](https://img.shields.io/badge/Download-MongoDB_Setup-blue.svg)]
   
-  [Download latest release](https://github.com/MohammadAtikurRahman/Embedding-MongoDB/releases/latest)
-  
-[![Download MongoDB Setup](https://img.shields.io/badge/Download-MongoDB_Setup-blue.svg)](mongodb-binaries/mongodb-setup.exe)
+- Download Mongodb Version 4.0.28 binary file and paste in `mongodb-binaries` folder
+- Download Node js Version 13.13 binary file and paste in `node_binaries` folder
 
-
-- The MongoDB in-memory database instance is managed using `mongodb-memory-server`.
-- Connection settings for MongoDB are configured in `connection.js`.
 
 
 
