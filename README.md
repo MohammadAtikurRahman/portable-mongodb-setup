@@ -61,6 +61,8 @@ Embedding-MongoDB/
 ## Configuration
   
   [Download latest release](https://github.com/MohammadAtikurRahman/Embedding-MongoDB/releases/latest)
+  
+[![Download MongoDB Setup](https://img.shields.io/badge/Download-MongoDB_Setup-blue.svg)](mongodb-binaries/mongodb-setup.exe)
 
 
 - The MongoDB in-memory database instance is managed using `mongodb-memory-server`.
