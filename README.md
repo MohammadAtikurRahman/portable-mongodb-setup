@@ -36,9 +36,9 @@ Before running this project, ensure you have the following installed:
 ```
 4. Create this Folder
 ```sh
-   ├── mongodb-binaries/
-   ├── mongodb-data/
-   ├── node_binaries/
+   ├── mongodb-binaries
+   ├── mongodb-data
+   ├── node_binaries
 ```
 ## Folder Structure
 ```sh
