@@ -59,10 +59,9 @@ Embedding-MongoDB/
 └── README.md
 ```
 ## Configuration
-  ![Download]
 
-- Download Mongodb Version 4.0.28 binary file and paste in `mongodb-binaries` folder
-- Download Node js Version 13.13 binary file and paste in `node_binaries` folder
+- Download Mongodb Version `4.0.28` binary file and paste in `mongodb-binaries` folder
+- Download Node js Version `13.13` binary file and paste in `node_binaries` folder
 
 
 
