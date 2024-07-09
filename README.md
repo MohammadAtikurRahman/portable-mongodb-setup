@@ -34,34 +34,33 @@ Before running this project, ensure you have the following installed:
 ```sh
   npm start
 ```
-
-The server will start on port 2000 by default.
-
-4. Accessing the APIs
-
-- To add a user, send a POST request to `http://localhost:2000/api/add_users` with JSON body containing `user_name`, `user_age`, and `user_gender`.
-- To fetch all users, send a GET request to `http://localhost:2000/api/get_users`.
-
-## Configuration
-
-- The MongoDB in-memory database instance is managed using `mongodb-memory-server`.
-- Connection settings for MongoDB are configured in `connection.js`.
+4. Create this Folder
+   ├── mongodb-binaries/
+   ├── mongodb-data/
+   ├── node_binaries/
 
 ## Folder Structure
 
-EmbeddedDB/
-├── model/
+Embedding-MongoDB/
+├── model
 │ └── user.js
-├── mongodb-binaries/
-├── mongodb-data/
-├── node_binaries/
-├── node_modules/
+├── mongodb-binaries
+├── mongodb-data
+├── node_binaries
+├── node_modules
 ├── .gitignore
 ├── connection.js
 ├── index.js
 ├── package-lock.json
 ├── package.json
 └── README.md
+
+## Configuration
+
+- The MongoDB in-memory database instance is managed using `mongodb-memory-server`.
+- Connection settings for MongoDB are configured in `connection.js`.
+
+
 
 - `model/`: Contains Mongoose schema definitions.
   - `user.js`: Defines the User mongoose schema.
