@@ -59,6 +59,9 @@ Embedding-MongoDB/
 └── README.md
 ```
 ## Configuration
+  
+  [Download latest release](https://github.com/MohammadAtikurRahman/Embedding-MongoDB/releases/latest)
+
 
 - The MongoDB in-memory database instance is managed using `mongodb-memory-server`.
 - Connection settings for MongoDB are configured in `connection.js`.
