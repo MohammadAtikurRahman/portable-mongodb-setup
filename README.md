@@ -23,7 +23,9 @@ Before running this project, ensure you have the following installed:
 ```sh
   git clone git@github.com:MohammadAtikurRahman/Embedding-MongoDB.git
 ```
-
+```sh
+  cd Embedding-MongoDB
+```
 2. Install dependencies
 
 ```sh
