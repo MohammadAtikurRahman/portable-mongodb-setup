@@ -27,12 +27,12 @@ Before running this project, ensure you have the following installed:
 2. Install dependencies
 
 ```sh
-npm install
+  npm install
 ```
 
 3. Start the server
 ```sh
-npm start
+  npm start
 ```
 
 The server will start on port 2000 by default.
