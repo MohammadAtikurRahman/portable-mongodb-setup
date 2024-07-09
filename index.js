@@ -1,34 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const path = require("path");
-
 const bodyParser = require("body-parser");
-const mongoose = require("mongoose").set("debug", true);
-const { MongoMemoryServer } = require("mongodb-memory-server");
+const mongoose = require("mongoose");
 
-const dbPath = path.join(__dirname, "./mongodb-data");
-const binaryPath = path.join(__dirname, "./mongodb-binaries");
-process.env.MONGOMS_SYSTEM_BINARY = path.join(binaryPath, "mongod.exe");
-
-const mongod = new MongoMemoryServer({
-  instance: {
-    dbName: "Test-Database",
-    dbPath: dbPath,
-    storageEngine: "wiredTiger",
-    port: 27017,
-  },
-  binary: {
-    version: "4.0.28",
-    downloadDir: binaryPath,
-    mongodBinaryPath: path.join(binaryPath, "mongod.exe"),
-    skipMD5: true,
-    debug: false,
-    autoDownload: false,
-  },
-  autoStart: false,
-});
-
+const connectToDatabase = require("./connection");
 const User = require("./model/user.js");
 
 app.use(express.json({ limit: "50mb" }));
@@ -71,24 +47,10 @@ app.get("/api/get_users", async (req, res) => {
 
 async function startServer() {
   try {
-    // Start MongoMemoryServer and get the connection URI
-    await mongod.start();
-    const mongoUri = await mongod.getUri();
+    // Connect to MongoDB
+    await connectToDatabase();
 
-    console.log("MongoDB In-Memory URI:", mongoUri);
-
-    // Connect mongoose to the in-memory instance
-    await mongoose.connect(mongoUri, {
-      // Remove useNewUrlParser and useUnifiedTopology
-      // These options are deprecated and have no effect
-      // useNewUrlParser: true,
-      // useUnifiedTopology: true,
-      // Use new options supported by Mongoose and the MongoDB Node.js driver
-      serverSelectionTimeoutMS: 5000, // Timeout after 5 seconds of waiting for connection
-      dbName: "Test-Database", // Specify the database name
-    });
-
-    // Listen for server shutdown
+    // Start Express server
     const server = app.listen(2000, () => {
       console.log("Server is running on port 2000");
     });
@@ -97,13 +59,13 @@ async function startServer() {
     process.on("SIGINT", async () => {
       console.log("Shutting down server...");
       await mongoose.disconnect();
-      await mongod.stop();
       server.close();
       console.log("Server shut down.");
       process.exit(0);
     });
   } catch (err) {
-    console.error("Error starting server or MongoMemoryServer:", err);
+    console.error("Error starting server:", err);
   }
 }
+
 startServer();
