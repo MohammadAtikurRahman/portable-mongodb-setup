@@ -21,10 +21,10 @@ Before running this project, ensure you have the following installed:
 1. Clone the repository
 
 ```sh
-  git clone git@github.com:MohammadAtikurRahman/Embedding-MongoDB.git
+  git clone git@github.com:MohammadAtikurRahman/portable-mongodb-setup.git
 ```
 ```sh
-  cd Embedding-MongoDB
+  cd portable-mongodb-setup
 ```
 2. Install dependencies
 

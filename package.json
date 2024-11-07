@@ -7,8 +7,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["mongodb", "portable", "nodejs", "embedded"],
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
