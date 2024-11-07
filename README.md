@@ -1,4 +1,4 @@
-# Embedded DB Project
+# Portable MongoDB Resources and Setup
 
 This project demonstrates how to use an in-memory MongoDB instance with Node.js and Express.
 
