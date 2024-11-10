@@ -1,19 +1,40 @@
 {
-  "name": "embededdb",
+  "name": "portable-mongodb",
   "version": "1.0.0",
-  "autho": "Md. Atikur Rahman",
-  "description": "Embedded MongoDB facilitates using MongoDB without the need for a separate installation of the MongoDB environment.",
+  "author": "Md. Atikur Rahman",
+  "description": "A portable MongoDB solution for Node.js that allows MongoDB to be embedded without a separate MongoDB installation.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
-  "keywords": ["mongodb", "portable", "nodejs", "embedded"],
+  "keywords": [
+    "mongodb",
+    "portable",
+    "nodejs",
+    "embedded",
+    "database",
+    "persistent"
+  ],
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.19.2",
     "mongodb-memory-server": "^9.4.0",
-    "mongoose": "^8.5.0",
+    "mongoose": "^8.5.0"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.4"
-  }
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MohammadAtikurRahman/portable-mongodb-setup.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MohammadAtikurRahman/portable-mongodb-setup/issues"
+  },
+  "homepage": "https://github.com/MohammadAtikurRahman/portable-mongodb-setup#readme"
 }
